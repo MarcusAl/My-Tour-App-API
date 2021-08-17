@@ -1,9 +1,9 @@
 ![Name](https://img.shields.io/badge/Marcus-Developer-red?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/marcusal/tour-app-api?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/marcusal/node-tour-app-api?style=for-the-badge)
 ![Followers](https://img.shields.io/github/followers/marcusal?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/marcusal?style=for-the-badge)
-![Pull Requests](https://img.shields.io/github/issues-pr/marcusal/tour-app-api?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/marcusal/tour-app-api?/main?style=for-the-badge)
+![Pull Requests](https://img.shields.io/github/issues-pr/marcusal/node-tour-app-api?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/marcusal/node-tour-app-api?/main?style=for-the-badge)
 
 
 # Tour App API V1.0
@@ -16,9 +16,8 @@
 - MongoDb
 - Mongoose
 
-Screenshot 2021-08-17 at 15.12.33.png
-
-Screenshot 2021-08-17 at 15.12.51.png
+### Using Mongodb Compass
+<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-17 at 15.12.33.png"/>
 
 ## Authors
 
@@ -39,6 +38,9 @@ Screenshot 2021-08-17 at 15.12.51.png
 - Node.js
 - NPM
 - Suitable internet connection
+
+### Using Postman
+<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-17 at 15.12.51.png"/>
 
 An internet browser, and a desktop PC or Mac
 
