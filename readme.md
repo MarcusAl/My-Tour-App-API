@@ -39,9 +39,6 @@
 - NPM
 - Suitable internet connection
 
-### Using Mongodb Compass
-<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-17 at 15.12.33.png"/>
-
 An internet browser, and a desktop PC or Mac
 
 ## Usage
