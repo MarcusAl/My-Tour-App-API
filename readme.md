@@ -16,8 +16,8 @@
 - MongoDb
 - Mongoose
 
-### Using Mongodb Compass
-<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-17 at 15.12.33.png"/>
+### Using Postman
+<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-18 at 10.42.17.png"/>
 
 ## Authors
 
@@ -39,8 +39,8 @@
 - NPM
 - Suitable internet connection
 
-### Using Postman
-<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-17 at 15.12.51.png"/>
+### Using Mongodb Compass
+<img align="center" alt="Screenshot" height="600px" src="Screenshot 2021-08-17 at 15.12.33.png"/>
 
 An internet browser, and a desktop PC or Mac
 
