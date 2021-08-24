@@ -18,6 +18,29 @@ const createSendToken = (
 ) => {
   const token = signToken(user._id);
 
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() +
+        // Convert to milliseconds
+        process.env.JWT_COOKIE_EXPIRES_IN *
+          24 *
+          60 *
+          1000
+    ),
+    // Cookie can not be accessed or modified by the browser.
+    httpOnly: true,
+  };
+
+  // Only create a secure cookie if in production
+  if (process.env.NODE_ENV === 'production')
+    cookieOptions.secure = true;
+
+  // Create a cookie
+  res.cookie('jwt', token, cookieOptions);
+
+  // Remove user password from output
+  user.password = undefined;
+
   res.status(statusCode).json({
     status: 'success',
     token,
@@ -80,6 +103,11 @@ exports.login = async (req, res, next) => {
 
   // 3) If everything is correct, send token to client
   createSendToken(user, 200, res);
+
+  user.setLastActive();
+  await user.save({
+    validateBeforeSave: false,
+  });
 };
 
 exports.protect = catchAsync(

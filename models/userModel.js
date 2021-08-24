@@ -63,6 +63,16 @@ const userSchema = new mongoose.Schema({
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
+  active: {
+    type: Boolean,
+    default: true,
+    // Keep this field hidden from view
+    select: false,
+  },
+  lastActive: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 userSchema.pre('save', function (next) {
@@ -103,6 +113,11 @@ userSchema.pre('save', function (next) {
     return next();
 
   this.passwordChangedAt = Date.now() - 1000;
+  next();
+});
+
+userSchema.pre('/^find/', function (next) {
+  this.find({ active: { $ne: false } });
   next();
 });
 
@@ -153,6 +168,12 @@ userSchema.methods.createPasswordResetToken =
       Date.now() + 10 * 60 * 1000;
 
     return resetToken;
+  };
+
+userSchema.methods.setLastActive =
+  function () {
+    const date = Date.now() - 1000;
+    this.lastActive = date;
   };
 
 const User = mongoose.model(
